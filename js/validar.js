@@ -45,7 +45,7 @@ let btnVal = document.getElementById ("btnVal");
             legendVal.textContent = "Bienvenido! Ya puede iniciar la compra";
             legendVal.style.background = "white";
             legendVal.style.paddingTop = "70px";
-            legendVal.style.paddingBottom = "80px";
+            legendVal.style.paddingBottom = "350px";
         } 
         else {
             localStorage.removeItem ("usuariolog");
