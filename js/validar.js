@@ -1,3 +1,11 @@
+class loginUser {
+    constructor (mail, password) {
+        this.mail = mail;
+        this.password = password;
+    }
+}
+//-----------------------------------------------------------------------------
+
 let btnVal = document.getElementById ("btnVal");
 
     btnVal.addEventListener ("click", function (e) {
@@ -46,7 +54,7 @@ let btnVal = document.getElementById ("btnVal");
             legendVal.textContent = "Los datos ingresados no son válidos";
             legendVal.style.background = "white";
             legendVal.style.paddingTop = "70px";
-            legendVal.style.paddingBottom = "80px";
+            legendVal.style.paddingBottom = "350px";
         }
     }
 })
