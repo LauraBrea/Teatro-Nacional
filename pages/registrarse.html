@@ -29,7 +29,7 @@
                         </ul>
                     </li>
                     <li>
-                        <li><a href="../pages/login.html" target="_blank" class="facebook"><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+                        <li><a href="../pages/login.html" class="facebook"><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
                         <script src=" "></script>
                     </li>
                     <li>
@@ -37,8 +37,7 @@
                         <script src=""></script>
                     </li>
                     <li>
-                        <button class="header__button button"><a href="../pages/registrarse.html" target="_blank">Registrarse</a></button> 
-                        <script src=""></script>
+                        <button class="header__button button"><a href="../pages/registrarse.html">Registrarse</a></button> 
                     </li>
                 </ul>
             </nav>
@@ -49,24 +48,28 @@
                 <h5 class="mainH5">Cree una nueva cuenta e inicie sesión para comprar boletos.</h5>
             </div>
             <div class="login__form">
-                <form action="">
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" id="">
-                    <label for="apellido">Apellido: </label>
-                    <input type="text" name="apellido" id=" ">
-                    <label for="telefono">Telefóno: </label>
-                    <input type="tel" name="telefono" id="">
+                <form action="" >
+                    <label for="name">Nombre: </label>
+                    <input type="text" id="name" required>
+                    <label for="lastname">Apellido: </label>
+                    <input type="text" id="lastname" required>
                     <label for="mail">Correo electrónico: </label>
-                    <input type="email" name="mail" id="mail">
-                    <label for="pass">Contraseña: </label>
-                    <input type="password" name="pass" id="">
+                    <input type="email" placeholder="" id="mail" required>
+                    <label for="password">Contraseña: </label>
+                    <input type="password" id="password" required minlength="6" maxlength="6">
                     <article class="login__but">
-                        <button class="loginbutton button" type="submit" onclick="pruebaemail(mail.value)" >ENVIAR</button>
+                        <button class="loginbutton button" type="submit" onclick="addUser()">ENVIAR</button>
                         <button class="loginbutton button" type="reset">BORRAR</button>
-                        <script src="../js/funcionesgenerales.js"></script>
+                        <script src="../js/registro.js"></script>
                     </article>
                 </form>
             </div>
+    </section>
+    <section>
+        <div class="">
+            <h3  id="LR"></h3>
+        </div>
+        <script src="../js/registro.js"></script>
     </section>
     <footer class="footer">
         <article class="footer__logo"> 

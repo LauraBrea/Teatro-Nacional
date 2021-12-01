@@ -4,7 +4,7 @@ form {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     color: black; }
-  
+
 input {
     font-size: 0.75rem;
     font-family: 'Montserrat', sans-serif;
@@ -32,7 +32,7 @@ input {
 /*--------- form ---------*/
 .login {
     width: 60%;
-    height: 580px;
+    height: 520px;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 80px;
@@ -80,7 +80,7 @@ input {
     height: auto;
     position: absolute;
     text-align: center;
-    top: 430px;
+    top: 350px;
     display: flex-box;
     flex-direction: row;
     }

@@ -41,7 +41,6 @@ const isStock = (selectqty, stock) => {
 const addToCard = (optionLoc, qty) => {
     const foundLoc = locations.find(location => location.id === optionLoc.toString());
     if(isStock(qty, foundLoc.stock)){
-            if (location.discount !== 0 ) {
                 let item = {
                     prod: foundLoc.name,
                     day: foundLoc.day,
@@ -53,20 +52,8 @@ const addToCard = (optionLoc, qty) => {
                     price: (foundLoc.price * qty) - ((foundLoc.price * qty) * foundLoc.discount),
                 }
                 car.push(item);
-                alert(`Se ha agregado al carrito: \n${foundLoc.name} - Fecha: ${foundLoc.day} ${foundLoc.date} - Ubicación: ${foundLoc.place} - Cant: ${qty} \nImporte: $ ${item.subprice} \nDescuento: -$ ${item.discount} \nImporte con descuento: $ ${item.price}`)
-            }
-            else {
-                let item = {
-                    prod: foundLoc.name,
-                    day: foundLoc.day,
-                    date: foundLoc.date,
-                    place: foundLoc.place,
-                    selectqty: qty,
-                    price: foundLoc.price * qty,
-                }
-                car.push(item);
-                alert(`Se ha agregado al carrito: \n${foundLoc.name} - Fecha: ${foundLoc.day} ${foundLoc.date} - Ubicación: ${foundLoc.place} - Cant: ${qty} \nImporte: $ ${item.price}`)
-            }
+                alert(`Se ha agregado al carrito: \n${foundLoc.name} - ${foundLoc.day} ${foundLoc.date} - Boletos: ${qty} ${foundLoc.place} \nSubtotal item: $ ${item.subprice} \nDescuento: -$ ${item.discount} \nTotal item: $ ${item.price}`)
+        
         locations[optionLoc - 1].stock -= qty;
     }
 };
@@ -76,7 +63,7 @@ const showTotal = () => {
     let dataSubTotal = "";
     let subtotal = 0;
     car.forEach(location => {
-        dataSubTotal += `${location.prod} - ${location.date} - ${location.place} - cant: ${location.selectqty} - Importe: $ ${location.price} \n`;
+        dataSubTotal += `${location.prod} - ${location.date} - ${location.selectqty} ${location.place} - Importe: $ ${location.price} \n`;
         subtotal += location.price
     })
     dataSubTotal += `Subtotal: $ ${subtotal}`;
