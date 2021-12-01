@@ -1,75 +1,75 @@
-function  login() {
+let newUser = [];
+let logUser = [];
+//----------------------------------------------------------------------------
 
-    alert ("Bienvenido al sistema de registro del Teatro Nacional");
-    
-    let seleccionusuario = prompt ("Es un usuario registrado? (Indique Si o No)").toLowerCase();
-        console.log ("Esta registrado: "+seleccionusuario);
-
-        const registrado = "si";
-        const noregistrado = "no";
-
-        if (seleccionusuario === registrado && seleccionusuario !== null) {
-
-            const usuarioreg = "usuario";
-            const passreg = 1234;
-            let error = 0;
-    
-            for(let i = 0 ; i <= 3 ; i = i +1){
-            
-                let usuario = prompt ("Ingrese su nombre de Usuario: (ej. usuario)").toLowerCase();
-                let pass = parseInt (prompt("Ingrese su Password: (ej. 1234)"));
-    
-                if (usuario === usuarioreg && pass === passreg){
-                    console.log ("Usuario registrado");
-                    alert ("Bienvenido!");
-                    break;
-                } 
-                else {
-                    console.log ("Error: " + i);
-                    error = error + 1;
-                    if (error == 3){
-                        alert ("Los datos ingresados son incorrectos");
-                        break;
-                    }
-                }
-            } 
-        }
-        else if (seleccionusuario === noregistrado && seleccionusuario !== null) {
-
-            class nuevoUsuario {
-                constructor (nombre, apellido,usunuevo,passnuevo) {
-                    this.nombre = nombre.toUpperCase();
-                    this.apellido = apellido.toUpperCase();
-                    this.telefono = parseInt (telefono);
-                    this.mail = mail.toLowerCase();
-                    this.passnuevo = parseInt (passnuevo);
-                }
-            }
-
-            let nuevoRegistro = ' ';
-            while (nuevoRegistro != null) {
-
-                let nuevoUsuarioX = new nuevoUsuario(
-                    prompt ("Ingrese su Nombre: "),
-                    prompt ("Ingrese su Apellido: "),
-                    prompt ("Ingrese un nombre de Usuario: (ej. nuevousuario)").toLowerCase(),
-                    prompt("Ingrese un password numérico de hasta 4 digitos: (ej.1111)"));
-
-                    if ((nuevoUsuarioX.usunuevo !== " " && nuevoUsuarioX.usunuevo !== null) && (nuevoUsuarioX.passnuevo !== isNaN && nuevoUsuarioX.passnuevo > 0 && nuevoUsuarioX.passnuevo < 9999)) {
-
-                        nuevoRegistro +=`ALTA USUARIO\n \nNombre: ${nuevoUsuarioX.nombre} ${nuevoUsuarioX.apellido} \nUsuario: ${nuevoUsuarioX.usunuevo} \nContraseña: ${nuevoUsuarioX.passnuevo}`;
-                        alert (nuevoRegistro);
-                    }
-                    else {
-                        alert ("Debe seleccionar una opcion valida");
-                        return login();
-                    }
-            }
-        }
-        else {
-            console.log ("error registro")
-            alert ("Debe seleccionar una opcion valida");
-            return login();
-        }
-    
+class User {
+    constructor (name,lastname,mail,password) {
+        this.name = name.toUpperCase();
+        this.lastname = lastname.toUpperCase();
+        this.mail = mail.toLowerCase();
+        this.password = password;
     }
+}
+
+class loginUser {
+    constructor (mail, password) {
+        this.mail = mail;
+        this.password = password;
+    }
+}
+//-----------------------------------------------------------------------------
+
+function addUser() {
+
+    let datname = document.getElementById ("name");
+    let datlastname= document.getElementById ("lastname");
+    let datmail = document.getElementById ("mail");
+    let datpassword = document.getElementById ("password");
+
+newUser.push(new User (datname.value, datlastname.value, datmail.value, datpassword.value));
+let userJSON =JSON.stringify (newUser);
+localStorage.setItem ("usuario", userJSON);
+
+const titulo = document.getElementById('LR');
+titulo.textContent = "usuario registrado";
+
+}
+//-------------------------------------------------------------------------------
+
+function validate() {
+
+    let reguser = JSON.parse (localStorage.getItem ("usuario"));
+    let regmail = " ";
+    let regpass = " ";
+
+    for (let usuario of reguser) {
+        regmail += usuario.mail;
+        regpass += usuario.password;
+    }
+
+    let mail = document.getElementById ("mail").value;
+    let password = document.getElementById ("password").value;
+
+    logUser.push(new loginUser(mail, password));
+    let userLogJSON =JSON.stringify (logUser);
+    localStorage.setItem ("usuariolog", userLogJSON);
+
+    let loguser = JSON.parse (localStorage.getItem ("usuariolog"));
+    let logmail = " ";
+    let logpass = " ";
+
+    for (let usuariolog of loguser) {
+        logmail += usuariolog.mail;
+        logpass += usuariolog.password;
+
+        if (regmail === logmail && regpass === logpass) {
+
+            logUser.push(new loginUser(logmail, logpass));
+            let userLogJSON =JSON.stringify (logUser);
+            localStorage.setItem ("usuariolog", userLogJSON);
+    
+        } else {
+            localStorage.removeItem ("usuariolog");
+        }
+    }
+}
