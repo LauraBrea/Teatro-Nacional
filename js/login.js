@@ -1,6 +1,5 @@
-let newUser = [];
-let logUser = [];
 //----------------------------------------------------------------------------
+const newUser = [];
 
 class User {
     constructor (name,lastname,mail,password) {
@@ -10,6 +9,9 @@ class User {
         this.password = password;
     }
 }
+
+//----------------------------------------------------------------------------
+const logUser = [];
 
 class loginUser {
     constructor (mail, password) {
@@ -30,8 +32,8 @@ newUser.push(new User (datname.value, datlastname.value, datmail.value, datpassw
 let userJSON =JSON.stringify (newUser);
 localStorage.setItem ("usuario", userJSON);
 
-const titulo = document.getElementById('LR');
-titulo.textContent = "usuario registrado";
+const legnewUser = document.getElementById('LR');
+legnewUser.textContent = "Usuario Registrado";
 
 }
 //-------------------------------------------------------------------------------
