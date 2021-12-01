@@ -55,12 +55,14 @@
                     <label for="password">Contraseña: </label>
                     <input type="password" id="password">
                     <article class="login__but">
-                        <button class="loginbutton button" type="submit" onclick="validate()">ENVIAR</button>
+                        <button class="loginbutton button" type="submit" id="btnVal">ENVIAR</button>
                         <button class="loginbutton button" type="reset">BORRAR</button>
                         <button class="loginbutton button"><a href="../pages/registrarse.html">REGISTRARSE</a></button> 
-                        <script src="../js/login.js"></script>
                     </article>
                 </form>
+            </div>
+            <div>
+                <h3 class="login__legend mainH3" id="usuVal"></h3>
             </div>
     </section>
     <footer class="footer">
@@ -102,5 +104,7 @@
             </article>
         </div>
     </footer>
+    <script src="../js/variablesGrales.js"></script>
+    <script src="../js/validar.js"></script>
 </body>
 </html>
