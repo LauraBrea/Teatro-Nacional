@@ -44,7 +44,7 @@
             </nav>
         </section>
     </header>
-    <section class="login">
+    <section class="login" id="loginVal" style="display: block;">
             <div class="login__txt">
                 <h5 class="mainH5">Inicie sesión o cree una nueva cuenta para comprar boletos.</h5>
             </div>
@@ -61,10 +61,11 @@
                     </article>
                 </form>
             </div>
-            <div>
-                <h3 class="login__legend mainH3" id="usuVal"></h3>
-            </div>
     </section>
+    <div class="legendRegbox" id="legendVal" style="display: none;">
+        <a class="iconCloseReg" onclick="location.reload()"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>
+        <h3 class="login__legend mainH3" id="usuVal">texto</h3>
+    </div>
     <footer class="footer">
         <article class="footer__logo"> 
             <img class="footer__logo footer__logo--img" src="../img/logobco.png" alt="logo gn">  

@@ -43,7 +43,7 @@
             </nav>
         </section>
     </header>
-    <section class="login" id=>
+    <section class="login" id="loginReg" style="display: block;">
             <div class="login__txt">
                 <h5 class="mainH5">Cree una nueva cuenta e inicie sesión para comprar boletos.</h5>
             </div>
@@ -63,10 +63,11 @@
                     </article>
                 </form>
             </div>
-            <div class="" id="">
-                <h3 class="login__legend mainH3" id="usuReg"></h3>
-            </div>
     </section>
+    <div class="legendRegbox" id="legendReg" style="display: none;">
+        <a class="iconCloseReg" onclick="location.reload()"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>
+        <h3 class="login__legend mainH3" id="usuReg">texto</h3>
+    </div>
     <footer class="footer">
         <article class="footer__logo"> 
             <img class="footer__logo footer__logo--img" src="../img/logobco.png" alt="logo gn">  
@@ -88,7 +89,7 @@
             </article>
             <article class="footer__form">
                 <article>
-                    <form  action="">
+                    <form action="">
                         <label for="mail">Suscribite a nuestro Newsletter: </label>
                         <br>
                         <input type="email" name="mail" id="">
@@ -107,6 +108,6 @@
         </div>
     </footer>
     <script src="../js/variablesGrales.js"></script>
-    <script src="../js/registro.js"></script>
+    <script src="../js/registrar.js"></script>
 </body>
 </html>

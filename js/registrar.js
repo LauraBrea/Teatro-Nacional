@@ -36,20 +36,27 @@ let btnReg = document.getElementById ("btnReg");
     
         if (regname == " " || reglastname == " " || regmail == " " || regpass == " "){
 
-            const legendReg = document.getElementById ("usuReg");
-            legendReg.textContent = "Los datos ingresados no son válidos";
-            legendReg.style.background = "white";   
-            legendReg.style.paddingTop = "70px";
-            legendReg.style.paddingBottom = "400px"; 
+            const loginReg = document.getElementById ("loginReg");
+            loginReg.style.display = "none";
+            
+            const legendReg = document.getElementById ("legendReg");
+            legendReg.style.display = "block";
+            
+            const usuReg = document.getElementById ("usuReg");
+            usuReg.textContent = "Los datos ingresados no son válidos";
 
             localStorage.removeItem ("usuario");
             
         } else {
-            const legendReg = document.getElementById ("usuReg");
-            legendReg.textContent = "Registrado! Inicie sesión para comprar boletos";
-            legendReg.style.background = "white";   
-            legendReg.style.paddingTop = "70px";
-            legendReg.style.paddingBottom = "400px"; 
+
+            const loginReg = document.getElementById ("loginReg");
+            loginReg.style.display = "none";
+
+            const legendReg = document.getElementById ("legendReg");
+            legendReg.style.display = "block";
+
+            const usuReg = document.getElementById ("usuReg");
+            usuReg.textContent = "Registrado! Inicie sesión para reservar boletos";
         }
     }
 })

@@ -41,20 +41,20 @@ let btnVal = document.getElementById ("btnVal");
             let userLogJSON =JSON.stringify (logUser);
             localStorage.setItem ("usuariolog", userLogJSON);
             
-            const legendVal = document.getElementById ("usuVal");
-            legendVal.textContent = "Bienvenido! Ya puede iniciar la compra";
-            legendVal.style.background = "white";
-            legendVal.style.paddingTop = "70px";
-            legendVal.style.paddingBottom = "350px";
+            const usuVal = document.getElementById ("usuVal");
+            usuVal.textContent = "Bienvenido! Ya puede iniciar la compra";
         } 
         else {
             localStorage.removeItem ("usuariolog");
 
-            const legendVal = document.getElementById ("usuVal");
-            legendVal.textContent = "Los datos ingresados no son válidos";
-            legendVal.style.background = "white";
-            legendVal.style.paddingTop = "70px";
-            legendVal.style.paddingBottom = "350px";
+            const usuVal = document.getElementById ("usuVal");
+            usuVal.textContent = "Los datos ingresados no son válidos";
+
+            const loginVal = document.getElementById ("loginVal");
+            loginVal.style.display = "none";
+
+            const legendVal = document.getElementById ("legendVal");
+            legendVal.style.display = "block";
         }
     }
 })
