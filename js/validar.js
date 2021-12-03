@@ -43,6 +43,12 @@ let btnVal = document.getElementById ("btnVal");
             
             const usuVal = document.getElementById ("usuVal");
             usuVal.textContent = "Bienvenido! Ya puede iniciar la compra";
+
+            const loginVal = document.getElementById ("loginVal");
+            loginVal.style.display = "none";
+
+            const legendVal = document.getElementById ("legendVal");
+            legendVal.style.display = "block";
         } 
         else {
             localStorage.removeItem ("usuariolog");

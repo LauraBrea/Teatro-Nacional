@@ -5,14 +5,14 @@ const fixedCost = 500;
 
 
 let locations = [
-    {id:'1', place: 'Palco bajo', day:'Viernes',  date:'07/01/22', name:'Lago de los Cisnes',  price: 2500, stock: 30, discount: 0.1},
-    {id:'2', place: 'Palco balcon', day:'Viernes',  date:'07/01/22', name:'Lago de los Cisnes',  price: 4500, stock: 30, discount: 0.1},
+    {id:'1', place: 'Palco Bajo', day:'Viernes',  date:'07/01/22', name:'Lago de los Cisnes',  price: 2500, stock: 30, discount: 0.1},
+    {id:'2', place: 'Palco Alto', day:'Viernes',  date:'07/01/22', name:'Lago de los Cisnes',  price: 4500, stock: 30, discount: 0.1},
     {id:'3', place: 'Platea', day:'Viernes',  date:'07/01/22', name:'Lago de los Cisnes',  price: 3500, stock: 30, discount: 0.1},
-    {id:'4', place: 'Palco bajo', day:'Sábado',  date:'08/01/22', name:'Lago de los Cisnes',  price: 2500, stock: 30, discount: 0},
-    {id:'5', place: 'Palco balcon', day:'Sábado',  date:'08/01/22', name:'Lago de los Cisnes',  price: 4500, stock: 30, discount: 0},
+    {id:'4', place: 'Palco Bajo', day:'Sábado',  date:'08/01/22', name:'Lago de los Cisnes',  price: 2500, stock: 30, discount: 0},
+    {id:'5', place: 'Palco Alto', day:'Sábado',  date:'08/01/22', name:'Lago de los Cisnes',  price: 4500, stock: 30, discount: 0},
     {id:'6', place: 'Platea', day:'Sábado',  date:'08/01/22', name:'Lago de los Cisnes',  price: 3500, stock: 30, discount: 0},
-    {id:'7', place: 'Palco bajo', day:'Domingo',  date:'09/01/22', name:'Lago de los Cisnes',  price: 2500, stock: 30, discount: 0},
-    {id:'8', place: 'Palco balcon', day:'Domingo',  date:'09/01/22', name:'Lago de los Cisnes',  price: 4500, stock: 30, discount: 0},
+    {id:'7', place: 'Palco Bajo', day:'Domingo',  date:'09/01/22', name:'Lago de los Cisnes',  price: 2500, stock: 30, discount: 0},
+    {id:'8', place: 'Palco Alto', day:'Domingo',  date:'09/01/22', name:'Lago de los Cisnes',  price: 4500, stock: 30, discount: 0},
     {id:'9', place: 'Platea', day:'Domingo',  date:'09/01/22', name:'Lago de los Cisnes',  price: 3500, stock: 30, discount: 0},
 ]
 
