@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" type="text/css" href="css/otherPages.css">
+    <link rel="stylesheet" type="text/css" href="css/displayReservar.css">
     <title>El Lago de los Cisnes</title>
 </head>
 <body>
@@ -45,7 +46,7 @@
         </section>
     </header>
     <main>
-        <section class="sliderLef">
+        <section class="sliderLef" style="display: block;" id="tituloLC">
             <div class="sliderLef__box">
                 <article class="sliderLef__img">
                     <img class="sliderLef__img sliderLef__img--img" src="img/3.jpg" alt=""> 
@@ -55,22 +56,20 @@
                     <h2 class="sliderLef__txt sliderLef__txt--h2 mainH2">EL LAGO DE LOS CISNES</h2>
                     <h5 class="sliderLef__txt sliderLef__txt--p1 mainH5">FECHAS PROGRAMADAS:</h5>
                     <article class="sliderLef__butlist">
-                        <button class="sliderLef__but button" onclick="comprar()">7 ENE</a></button>
-                        <button class="sliderLef__but button" onclick="comprar()">8 ENE</button>
-                        <button class="sliderLef__but button" onclick="comprar()">9 ENE</button>
+                        <a href="#"><button class="sliderLef__but button" id="sieteEne">7 ENE</button></a>
+                        <a href="#"><button class="sliderLef__but button" id="ochoEne">8 ENE</button></a>
+                        <a href="#"><button class="sliderLef__but button" id="nueveEne">9 ENE</button></a>
                         <button class="sliderLef__but buttonIn" onclick="">18 MAR</button>
                         <button class="sliderLef__but buttonIn" onclick="">19 MAR</button>
                         <button class="sliderLef__but buttonIn" onclick="">20 MAR</button>
                         <button class="sliderLef__but buttonIn" onclick="">3 JUN</button>
                         <button class="sliderLef__but buttonIn" onclick="">4 JUN</button>
                         <button class="sliderLef__but buttonIn" onclick="">5 JUN</button>
-                        <script src="js/nuevafuncion.js"></script>
-                        <script src="js/comprar.js"></script>
                     </article>
                 </article>
             </div>
         </section>
-        <section class="tituloOb">
+        <section class="tituloOb" style="display: block;" id="sinopsisLC">
             <div class="tituloOb__box"> 
                 <h3 class="mainH3">SINOPSIS</h3>
                 <article>
@@ -80,6 +79,82 @@
                 </article>
                 <p class="mainParr">Su primera presentación tuvo lugar en el Teatro Bolshói de Moscú con la coreografía de Julius Reisinger el 4 de marzo de 1877. Paradójicamente, no fue muy aceptado en su momento. Sin embargo, el 15 de enero de 1895, con la nueva coreografía de Marius Petipa y de Lev Ivanov esta obra logró un gran éxito en el Teatro Mariinsky de San Petersburgo. Marius Petipa se encargó del primer y tercer acto (actos en el castillo) y Lev Ivanov del segundo y cuarto acto (actos del lago).</p>
                 <p class="mainParr">La obra transcurre entre el amor y la magia, enlazando en sus cuadros la eterna lucha del bien y del mal. La protagonizan el príncipe Sigfrido, enamorado de Odette, joven convertida en cisne por el hechizo del malvado Von Rothbart y Odile el cisne negro e hija del brujo.</p>
+            </div>
+        </section>
+        <section class="ticket" style="display: none;" id="reservartickets">
+            <div class="ticket__titlebox">
+                <article class="ticket__title">
+                    <a href="#" class="ticket__titleicon" id="closeTicket"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>
+                    <h2 class="mainH2">RESERVAR BOLETOS</h2>
+                </article>
+                <article class="ticket__titlespace"></article>
+            </div>
+            <div class="ticket__box">
+                <div class="ticket__tablebox">
+                    <article class="ticket__titletable">
+                        <h3 class="ticket__titlename mainH3" id="nameTicket">OBRA: </h3>
+                        <h3 class="ticket__titlename mainH3" id="dateTicket">FECHA: </h3>
+                    </article>
+                    <table class="ticket__table">
+                            <tr>
+                                <td class=""> Platea </td>
+                                <td> $ 3500 </td>
+                                <td> Boletos: </td>
+                                <td>
+                                    <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Palco Bajo </td>
+                                <td> $ 2500 </td>
+                                <td> Boletos: </td>
+                                <td>
+                                    <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Palco Alto </td>
+                                <td> $ 4500 </td>
+                                <td> Boletos: </td>
+                                <td>
+                                    <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                                </td>
+                            </tr>
+                    </table>
+                    <article class="ticket__btn">
+                        <button class="ticket__but ticket__but--but button">AGREGAR AL CARRITO</button>
+                    </article>
+                </div>
+                <div class="ticket__map">
+                    <h5 class="ticket__maptxt mainH5">SALA TEATRO NACIONAL</h5>
+                    <img class="ticket__map ticket__map--img" src="img/plano-sala.jpg" alt="">
+                </div>
+                <div class="ticket__txtbox">
+                    <div>
+                        <article class="ticket__titletxt">
+                            <h5 class="ticket__subtitletxt  mainH5">ENTREGA DE ENTRADAS</h5>
+                            <a href="#" class="ticket__icon" id="deliverticket"><i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></a>
+                        </article>
+                        <article class="ticket__subtitlespace"></article>
+                        <article>
+                            <p class="mainParr" style="display: none;" id=delivertxt>Las entradas se retiran por ventanilla 30 minutos antes del evento. Encontrará más información en el correo electrónico de confirmación de su reserva.</p>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="ticket__titletxt">
+                            <h5 class="ticket__subtitletxt  mainH5">¿PUEDO ELEGIR MIS ASIENTOS?</h5>
+                            <a href="#" class="ticket__icon" id="selectseat"><i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></a>
+                        </article>
+                        <article class="ticket__subtitlespace"></article>
+                        <article>
+                            <p class="mainParr" style="display: none;" id="seattxt">Solo puede seleccionar la categoría, y no los asientos exactos.
+                                <br>
+                                Si pides 2 o 3 boletos: tus asientos estarán uno junto al otro.
+                                <br>
+                                Si solicita 4 o más boletos: sus asientos estarán uno junto al otro o, si esto no es posible, le proporcionaremos una combinación de grupos de asientos (al menos en pares, por ejemplo 2 + 2 o 2 + 3).</p>
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -122,5 +197,6 @@
             </article>
         </div>
     </footer>
+    <script src="js/desplegarMenu.js"></script>
 </body>
 </html>

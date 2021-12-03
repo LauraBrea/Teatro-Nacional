@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="stylesheet" type="text/css" href="../css/estilos.css">
-    <link rel="stylesheet" type="text/css" href="../css/registrarse.css">
-    <title>Registrarse</title>
+    <link rel="stylesheet" type="text/css" href="../css/reservar.css">
+    <title>Comprar boletos</title>
 </head>
 <body>
     <header class="header">
@@ -43,29 +43,78 @@
             </nav>
         </section>
     </header>
-    <section class="login" id=>
-            <div class="login__txt">
-                <h5 class="mainH5">Cree una nueva cuenta e inicie sesión para comprar boletos.</h5>
+    <section class="ticket" id="nodoticket" >
+        <div class="ticket__title">
+            <h2 class="mainH2">RESERVAR BOLETOS</h2>
+        </div>
+        <div class="ticket__titlespace"> </div>
+        <div class="ticket__box">
+            <div class="ticket__tablebox">
+                <article class="ticket__titletable">
+                    <h3 class="ticket__titlename mainH3">OBRA: </h3>
+                    <h3 class="ticket__titlename mainH3">FECHA: </h3>
+                </article>
+                <table class="ticket__table">
+                        <tr>
+                            <td class=""> Platea </td>
+                            <td> $ 3500 </td>
+                            <td> Boletos: </td>
+                            <td>
+                                <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Palco Bajo </td>
+                            <td> $ 2500 </td>
+                            <td> Boletos: </td>
+                            <td>
+                                <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Palco Alto </td>
+                            <td> $ 4500 </td>
+                            <td> Boletos: </td>
+                            <td>
+                                <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                            </td>
+                        </tr>
+                </table>
+                <article class="ticket__btn">
+                    <button class="ticket__but ticket__but--but button">AGREGAR AL CARRITO</button>
+                </article>
             </div>
-            <div class="login__form">
-                <form action="" >
-                    <label for="name">Nombre: </label>
-                    <input type="text" id="name" required>
-                    <label for="lastname">Apellido: </label>
-                    <input type="text" id="lastname" required>
-                    <label for="mail">Correo electrónico: </label>
-                    <input type="email" pattern="[^ @]*@[^ @]*" id="mail" required>
-                    <label for="password">Contraseña: </label>
-                    <input type="password" id="password" required minlength="6" maxlength="6">
-                    <article class="login__but">
-                        <button class="loginbutton button" type="submit" id="btnReg">ENVIAR</button>
-                        <button class="loginbutton button" type="reset">BORRAR</button>
+            <div class="ticket__map">
+                <h5 class="ticket__maptxt mainH5">SALA TEATRO NACIONAL</h5>
+                <img class="ticket__map ticket__map--img" src="../img/plano-sala.jpg" alt="">
+            </div>
+            <div class="ticket__txtbox">
+                <div>
+                    <article class="ticket__titletxt">
+                        <h5 class="ticket__subtitletxt  mainH5">ENTREGA DE ENTRADAS</h5>
+                        <a href="#" class="ticket__icon" id="deliverticket"><i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></a>
                     </article>
-                </form>
+                    <article class="ticket__subtitlespace"></article>
+                    <article>
+                        <p class="mainParr" style="display: none;" id=delivertxt>Las entradas se retiran por ventanilla 30 minutos antes del evento. Encontrará más información en el correo electrónico de confirmación de su reserva.</p>
+                    </article>
+                </div>
+                <div>
+                    <article class="ticket__titletxt">
+                        <h5 class="ticket__subtitletxt  mainH5">¿PUEDO ELEGIR MIS ASIENTOS?</h5>
+                        <a href="#" class="ticket__icon" id="selectseat"><i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="ticket__subtitlespace"></article>
+                    <article>
+                        <p class="mainParr" style="display: none;" id="seattxt">Solo puede seleccionar la categoría, y no los asientos exactos.
+                            <br>
+                            Si pides 2 o 3 boletos: tus asientos estarán uno junto al otro.
+                            <br>
+                            Si solicita 4 o más boletos: sus asientos estarán uno junto al otro o, si esto no es posible, le proporcionaremos una combinación de grupos de asientos (al menos en pares, por ejemplo 2 + 2 o 2 + 3).</p>
+                    </article>
+                </div>
             </div>
-            <div class="" id="">
-                <h3 class="login__legend mainH3" id="usuReg"></h3>
-            </div>
+        </div>
     </section>
     <footer class="footer">
         <article class="footer__logo"> 
@@ -106,7 +155,6 @@
             </article>
         </div>
     </footer>
-    <script src="../js/variablesGrales.js"></script>
-    <script src="../js/registro.js"></script>
+    <script src="../js/desplegarMenu.js"></script>
 </body>
 </html>
