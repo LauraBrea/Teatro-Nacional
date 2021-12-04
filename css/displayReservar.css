@@ -64,15 +64,10 @@ input[type=number]::-webkit-inner-spin-button {
     height: 70px; }
 
 .ticket__titleicon {
+    color: #b5a58a;
     margin-top: 15px;
     float:right;
-    }
-
-.ticket__title a:link {
-    color: #b5a58a; }
-
-.ticket__title a:visited {
-    color: #b5a58a; }
+    cursor: pointer; }
 
 .ticket__title  a:hover {
     color: black; }
@@ -129,6 +124,19 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: #f0eeee;
     border: none; }
 
+.ticket__btnadd {
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-color: white;
+    color: #b5a58a;
+    padding: 0px;
+    margin-top: 10px; }
+
+.ticket__btnadd:hover {
+    background-color: white;
+    color: black; }
+
 .ticket__btn {
     width: 100%;
     text-align: center;
@@ -172,16 +180,11 @@ input[type=number]::-webkit-inner-spin-button {
 
 .ticket__icon {
     width: 5%;
-    margin-top: 25px; }
-
-.ticket__titletxt a:link {
-    color: black; }
-
-.ticket__titletxt a:visited {
-    color: black; }
+    margin-top: 25px; 
+    color: #b5a58a; }
 
 .ticket__titletxt  a:hover {
-    color: #b5a58a; }
+    color: black; }
 
 .ticket__subtitlespace {
     width: 100%;

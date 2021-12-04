@@ -53,6 +53,8 @@ a:active {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
   z-index: 3;}
 
 .button:hover {

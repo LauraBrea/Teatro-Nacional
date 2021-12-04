@@ -14,10 +14,12 @@ let btnVal = document.getElementById ("btnVal");
     let reguser = JSON.parse (localStorage.getItem ("usuario"));
     let regmail = " ";
     let regpass = " ";
+    let regname = " ";
 
     for (let usuario of reguser) {
         regmail += usuario.mail;
         regpass += usuario.password;
+        regname += usuario.name;
     }
 
     let mail = document.getElementById ("mail").value;
@@ -42,13 +44,14 @@ let btnVal = document.getElementById ("btnVal");
             localStorage.setItem ("usuariolog", userLogJSON);
             
             const usuVal = document.getElementById ("usuVal");
-            usuVal.textContent = "Bienvenido! Ya puede iniciar la compra";
+            usuVal.textContent = "Bienvenido/a " + regname + " !";
 
             const loginVal = document.getElementById ("loginVal");
             loginVal.style.display = "none";
 
             const legendVal = document.getElementById ("legendVal");
             legendVal.style.display = "block";
+
         } 
         else {
             localStorage.removeItem ("usuariolog");

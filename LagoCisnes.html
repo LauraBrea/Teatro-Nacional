@@ -30,11 +30,11 @@
                         </ul>
                     </li>
                     <li>
-                        <li><a href="pages/login.html" class="facebook"><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+                        <li><a href="pages/login.html" class="user"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a></li>
                         <script src=" "></script>
                     </li>
                     <li>
-                        <li><a href=" " target="_blank" class="facebook"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> 0</a></li>
+                        <li><a href=" " target="_blank" class="shoppingcart"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> 0</a></li>
                         <script src=""></script>
                     </li>
                     <li>
@@ -84,7 +84,7 @@
         <section class="ticket" style="display: none;" id="reservartickets">
             <div class="ticket__titlebox">
                 <article class="ticket__title">
-                    <a href="#" class="ticket__titleicon" id="closeTicket"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>
+                    <a class="ticket__titleicon" onclick="location.reload()" id="closeTicket"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>
                     <h2 class="mainH2">RESERVAR BOLETOS</h2>
                 </article>
                 <article class="ticket__titlespace"></article>
@@ -101,7 +101,10 @@
                                 <td> $ 3500 </td>
                                 <td> Boletos: </td>
                                 <td>
-                                    <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                                    <input class="ticket__input" type="number" name="inputLoc" id="" min="0" max="10" placeholder="0">
+                                </td>
+                                <td>
+                                    <button class="ticket__btnadd button"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -109,7 +112,10 @@
                                 <td> $ 2500 </td>
                                 <td> Boletos: </td>
                                 <td>
-                                    <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                                    <input class="ticket__input" type="number" name="inputLoc" id="" min="0" max="10" placeholder="0">
+                                </td>
+                                <td>
+                                    <button class="ticket__btnadd button"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -117,7 +123,10 @@
                                 <td> $ 4500 </td>
                                 <td> Boletos: </td>
                                 <td>
-                                    <input class="ticket__input" type="number" name="" id="" min="0" max="10" placeholder="0">
+                                    <input class="ticket__input" type="number" name="inputLoc" id="" min="0" max="10" placeholder="0">
+                                </td>
+                                <td>
+                                    <button class="ticket__btnadd button"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                     </table>
@@ -133,7 +142,7 @@
                     <div>
                         <article class="ticket__titletxt">
                             <h5 class="ticket__subtitletxt  mainH5">ENTREGA DE ENTRADAS</h5>
-                            <a href="#" class="ticket__icon" id="deliverticket"><i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></a>
+                            <a class="ticket__icon" id="deliverticket"><i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></a>
                         </article>
                         <article class="ticket__subtitlespace"></article>
                         <article>
@@ -143,7 +152,7 @@
                     <div>
                         <article class="ticket__titletxt">
                             <h5 class="ticket__subtitletxt  mainH5">¿PUEDO ELEGIR MIS ASIENTOS?</h5>
-                            <a href="#" class="ticket__icon" id="selectseat"><i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></a>
+                            <a class="ticket__icon" id="selectseat"><i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></a>
                         </article>
                         <article class="ticket__subtitlespace"></article>
                         <article>

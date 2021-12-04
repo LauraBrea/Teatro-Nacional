@@ -52,7 +52,7 @@ sieteEne.addEventListener ("click", function (e) {
     nameTicket.textContent = "LAGO DE LOS CISNES";
 
     const dateTicket = document.getElementById ("dateTicket");
-    dateTicket.textContent = "Viernes, 7 Enero 2022";
+    dateTicket.textContent = "Viernes, 7 Enero 2022 (-10%)";
 })
 //  Abrir Desplegable Menú Reservar entradas 8 Ene ---------------------
 
