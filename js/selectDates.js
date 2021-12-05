@@ -3,10 +3,10 @@
 let deliverticket = document.getElementById ("deliverticket");
 
 deliverticket.addEventListener ("mouseenter", function (e) {
-        e.preventDefault(); 
+    e.preventDefault(); 
 
-        const delivertxt = document.getElementById ("delivertxt");
-        delivertxt.style.display = "contents";
+    const delivertxt = document.getElementById ("delivertxt");
+    delivertxt.style.display = "contents";
 })
 
 deliverticket.addEventListener ("mouseleave", function (e) {
@@ -20,10 +20,10 @@ deliverticket.addEventListener ("mouseleave", function (e) {
 let selectseat = document.getElementById ("selectseat");
 
 selectseat.addEventListener ("mouseenter", function (e) {
-        e.preventDefault(); 
+    e.preventDefault(); 
 
-        const seattxt = document.getElementById ("seattxt");
-        seattxt.style.display = "contents";
+    const seattxt = document.getElementById ("seattxt");
+    seattxt.style.display = "contents";
 })
 
 selectseat.addEventListener ("mouseleave", function (e) {
@@ -39,6 +39,13 @@ let sieteEne = document.getElementById ("sieteEne");
 sieteEne.addEventListener ("click", function (e) {
     e.preventDefault(); 
 
+    const foundDate = dates.find (date => date.name === 'sieteEne');
+    console.log (foundDate);
+    
+    let dateJSON = JSON.stringify (foundDate);
+    sessionStorage.setItem ("showtempo", dateJSON);
+    console.log (dateJSON);
+
     const reservartickets = document.getElementById ("reservartickets");
     reservartickets.style.display = "contents";
 
@@ -53,6 +60,7 @@ sieteEne.addEventListener ("click", function (e) {
 
     const dateTicket = document.getElementById ("dateTicket");
     dateTicket.textContent = "Viernes, 7 Enero 2022 (-10%)";
+    
 })
 //  Abrir Desplegable Menú Reservar entradas 8 Ene ---------------------
 
@@ -60,6 +68,13 @@ let ochoEne = document.getElementById ("ochoEne");
 
 ochoEne.addEventListener ("click", function (e) {
     e.preventDefault(); 
+
+    const foundDate = dates.find (date => date.name === 'ochoEne');
+    console.log (foundDate);
+    
+    let dateJSON = JSON.stringify (foundDate);
+    sessionStorage.setItem ("showtempo", dateJSON);
+    console.log (dateJSON);
 
     const reservartickets = document.getElementById ("reservartickets");
     reservartickets.style.display = "contents";
@@ -83,6 +98,13 @@ let nueveEne = document.getElementById ("nueveEne");
 nueveEne.addEventListener ("click", function (e) {
     e.preventDefault(); 
 
+    const foundDate = dates.find (date => date.name === 'nueveEne');
+    console.log (foundDate);
+    
+    let dateJSON = JSON.stringify (foundDate);
+    sessionStorage.setItem ("showtempo", dateJSON);
+    console.log (dateJSON);
+
     const reservartickets = document.getElementById ("reservartickets");
     reservartickets.style.display = "contents";
 
@@ -98,6 +120,7 @@ nueveEne.addEventListener ("click", function (e) {
     const dateTicket = document.getElementById ("dateTicket");
     dateTicket.textContent = "Domingo 9 Enero 2022";
 })
+
 //  Cerrar Desplegable Menú Reservar entradas ---------------------------
 
 let closeTicket = document.getElementById ("closeTicket");

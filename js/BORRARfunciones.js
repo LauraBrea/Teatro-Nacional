@@ -1,4 +1,4 @@
-
+/*
 const selectedQty = 'Ingrese la cantidad de entradas:'
 let car = [];
 const fixedCost = 500;
@@ -72,3 +72,17 @@ const showTotal = () => {
     alert (`${dataSubTotal} \nCargo servicio: +$ ${fixedCost} \n \nTOTAL: $ ${datatotal} `);
     return;
 };
+*/
+
+
+function showcar() {
+    let text;
+    let li = document.createElement ("li");
+    let p= document.createElement ("p");
+    
+        for (i=0; i < car.lenght; i++) {
+            contenido = car[i].show + car[i].price;
+            p.appendChild(document.createTextNode(text));
+            document.querySelector("#listacompra").appendChild(li).appendChild(p);
+        }
+    }

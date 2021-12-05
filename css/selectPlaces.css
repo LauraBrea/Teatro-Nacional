@@ -10,7 +10,7 @@ table {
     }
   
 table tr td {
-    width: 50%;
+    width: 45%;
     border: 2px;
     border-style: solid;
     border-top: none;
@@ -86,7 +86,7 @@ input[type=number]::-webkit-inner-spin-button {
     position: relative;
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 350px auto;
+    grid-template-rows: 365px auto;
     justify-items: stretch;
     justify-content: stretch;
     align-items: top;
@@ -131,11 +131,20 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: white;
     color: #b5a58a;
     padding: 0px;
-    margin-top: 10px; }
+    margin-top: 10px;
+    cursor: pointer; }
 
 .ticket__btnadd:hover {
     background-color: white;
     color: black; }
+
+.ticket__listacompra {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif; 
+    position: absolute;
+    top: 67%; }
 
 .ticket__btn {
     width: 100%;
@@ -145,7 +154,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 .ticket__but--but {
     height: 40px;
-    width: 220px;
+    width: 190px;
+    padding: 0px;
     border-radius: 10px; }
 
 .ticket__map {
@@ -181,7 +191,8 @@ input[type=number]::-webkit-inner-spin-button {
 .ticket__icon {
     width: 5%;
     margin-top: 25px; 
-    color: #b5a58a; }
+    color: #b5a58a;
+    cursor: pointer; }
 
 .ticket__titletxt  a:hover {
     color: black; }

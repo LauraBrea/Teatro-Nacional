@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
     <link rel="stylesheet" type="text/css" href="css/otherPages.css">
-    <link rel="stylesheet" type="text/css" href="css/displayReservar.css">
+    <link rel="stylesheet" type="text/css" href="css/selectPlaces.css">
     <title>El Lago de los Cisnes</title>
 </head>
 <body>
@@ -101,10 +101,10 @@
                                 <td> $ 3500 </td>
                                 <td> Boletos: </td>
                                 <td>
-                                    <input class="ticket__input" type="number" name="inputLoc" id="" min="0" max="10" placeholder="0">
+                                    <input class="ticket__input" type="number" id="inputPL" min="0" max="10" placeholder="0">
                                 </td>
                                 <td>
-                                    <button class="ticket__btnadd button"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
+                                    <button class="ticket__btnadd" type="submit" id="btnPL"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -112,10 +112,10 @@
                                 <td> $ 2500 </td>
                                 <td> Boletos: </td>
                                 <td>
-                                    <input class="ticket__input" type="number" name="inputLoc" id="" min="0" max="10" placeholder="0">
+                                    <input class="ticket__input" type="number" id="inputPB" min="0" max="10" placeholder="0">
                                 </td>
                                 <td>
-                                    <button class="ticket__btnadd button"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
+                                    <button class="ticket__btnadd" type="submit" id="btnPB"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -123,15 +123,16 @@
                                 <td> $ 4500 </td>
                                 <td> Boletos: </td>
                                 <td>
-                                    <input class="ticket__input" type="number" name="inputLoc" id="" min="0" max="10" placeholder="0">
+                                    <input class="ticket__input" type="number" id="inputPA" min="0" max="10" placeholder="0">
                                 </td>
                                 <td>
-                                    <button class="ticket__btnadd button"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
+                                    <button class="ticket__btnadd" type="submit" id="btnPA"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                     </table>
+                    <article class="ticket__listacompra" id="listacompra"></article>
                     <article class="ticket__btn">
-                        <button class="ticket__but ticket__but--but button">AGREGAR AL CARRITO</button>
+                        <button class="ticket__but ticket__but--but button">VER CARRITO</button>
                     </article>
                 </div>
                 <div class="ticket__map">
@@ -206,6 +207,8 @@
             </article>
         </div>
     </footer>
-    <script src="js/desplegarMenu.js"></script>
+    <script src="js/genericFunctions.js"></script>
+    <script src="js/selectDates.js"></script>
+    <script src="js/selectPlaces.js"></script>
 </body>
 </html>
