@@ -11,6 +11,7 @@ btnPL.addEventListener ("click", function (e) {
 
     let itemPlace = {
         show: foundShow.show,
+        day: foundShow.day,
         date: foundShow.date,
         qty: foundQty,
         place: foundPlace.place,
@@ -23,7 +24,7 @@ btnPL.addEventListener ("click", function (e) {
     console.log (itemPlaceJSON);
 
     const listacompra = document.getElementById ("listacompra");
-    listacompra.textContent = `${itemPlace.show} - ${itemPlace.date} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
+    listacompra.textContent = `${itemPlace.date} - ${itemPlace.show} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
 })
 
 //  Seleccion Boletos Palco Bajo --------------------------------------
@@ -39,6 +40,7 @@ btnPB.addEventListener ("click", function (e) {
 
     let itemPlace = {
         show: foundShow.show,
+        day: foundShow.day,
         date: foundShow.date,
         qty: foundQty,
         place: foundPlace.place,
@@ -51,7 +53,7 @@ btnPB.addEventListener ("click", function (e) {
         console.log (itemPlaceJSON);
 
         const listacompra = document.getElementById ("listacompra");
-        listacompra.textContent = `${itemPlace.show} - ${itemPlace.date} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
+        listacompra.textContent = `${itemPlace.date} - ${itemPlace.show} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
     })
 
 //  Seleccion Boletos Palco Alto --------------------------------------
@@ -67,6 +69,7 @@ btnPA.addEventListener ("click", function (e) {
 
     let itemPlace = {
         show: foundShow.show,
+        day: foundShow.day,
         date: foundShow.date,
         qty: foundQty,
         place: foundPlace.place,
@@ -79,7 +82,7 @@ btnPA.addEventListener ("click", function (e) {
         console.log (itemPlaceJSON);
 
         const listacompra = document.getElementById ("listacompra");
-        listacompra.textContent = `${itemPlace.show} - ${itemPlace.date} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
+        listacompra.textContent = `${itemPlace.date} - ${itemPlace.show} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
     })
 
 
