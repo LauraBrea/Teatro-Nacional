@@ -2,30 +2,18 @@
 
 let btnPL = document.getElementById ("btnPL");
 
-btnPL.addEventListener ("click", function (e) {
-    e.preventDefault(); 
+    btnPL.addEventListener ("click", function (e) {
+        e.preventDefault(); 
 
-    const foundPlace = locations.find (location => location.name === 'PL');
-    const foundQty = document.getElementById ("inputPL").value;
-    let foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
+        const foundPlace = locations.find (location => location.name === 'PL');
+        const foundQty = document.getElementById ("inputPL").value;
+        const foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
-    let itemPlace = {
-        show: foundShow.show,
-        day: foundShow.day,
-        date: foundShow.date,
-        qty: foundQty,
-        place: foundPlace.place,
-        subprice: foundPlace.price * foundQty,
-        discount: (foundPlace.price * foundQty) * foundShow.discount,
-        price: (foundPlace.price * foundQty) -((foundPlace.price * foundQty) * foundShow.discount),
-    }
-    let itemPlaceJSON = JSON.stringify (itemPlace);
-    sessionStorage.setItem ("placetempoPL", itemPlaceJSON);
-    console.log (itemPlaceJSON);
+        addToCard (foundPlace, foundQty, foundShow); 
 
-    const listacompra = document.getElementById ("listacompra");
-    listacompra.textContent = `${itemPlace.date} - ${itemPlace.show} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
-})
+        const listacompra = document.getElementById ("listacompra");
+        listacompra.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
+    })
 
 //  Seleccion Boletos Palco Bajo --------------------------------------
 
@@ -38,23 +26,11 @@ btnPB.addEventListener ("click", function (e) {
     const foundQty = document.getElementById ("inputPB").value;
     let foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
-    let itemPlace = {
-        show: foundShow.show,
-        day: foundShow.day,
-        date: foundShow.date,
-        qty: foundQty,
-        place: foundPlace.place,
-        subprice: foundPlace.price * foundQty,
-        discount: (foundPlace.price * foundQty) * foundShow.discount,
-        price: (foundPlace.price * foundQty) -((foundPlace.price * foundQty) * foundShow.discount),
-    }
-        let itemPlaceJSON = JSON.stringify (itemPlace);
-        sessionStorage.setItem ("placetempoPB", itemPlaceJSON);
-        console.log (itemPlaceJSON);
+    addToCard (foundPlace, foundQty, foundShow); 
 
-        const listacompra = document.getElementById ("listacompra");
-        listacompra.textContent = `${itemPlace.date} - ${itemPlace.show} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
-    })
+    const listacompra = document.getElementById ("listacompra");
+    listacompra.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
+})
 
 //  Seleccion Boletos Palco Alto --------------------------------------
 
@@ -67,22 +43,10 @@ btnPA.addEventListener ("click", function (e) {
     const foundQty = document.getElementById ("inputPA").value;
     let foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
-    let itemPlace = {
-        show: foundShow.show,
-        day: foundShow.day,
-        date: foundShow.date,
-        qty: foundQty,
-        place: foundPlace.place,
-        subprice: foundPlace.price * foundQty,
-        discount: (foundPlace.price * foundQty) * foundShow.discount,
-        price: (foundPlace.price * foundQty) -((foundPlace.price * foundQty) * foundShow.discount),
-    }
-        let itemPlaceJSON = JSON.stringify (itemPlace);
-        sessionStorage.setItem ("placetempoPA", itemPlaceJSON);
-        console.log (itemPlaceJSON);
+    addToCard (foundPlace, foundQty, foundShow); 
 
-        const listacompra = document.getElementById ("listacompra");
-        listacompra.textContent = `${itemPlace.date} - ${itemPlace.show} - ${itemPlace.qty} ${itemPlace.place} - SubTot: $ ${itemPlace.subprice} - Desc: -$ ${itemPlace.discount} - Total: $ ${itemPlace.price}`;
-    })
+    const listacompra = document.getElementById ("listacompra");
+    listacompra.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
+})
 
 

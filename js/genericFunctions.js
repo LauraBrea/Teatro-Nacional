@@ -20,7 +20,45 @@ let dates = [
 let locations = [
     {name:'PB', place:'Palco Bajo', price: 2500, stock: 30},
     {name:'PA', place:'Palco Alto', price: 4500, stock: 30},
-    {name:'PL', place:'Platea', price: 3500, stock: 30},
+    {name:'PL', place:'Platea', price: 3500, stock: 3},
 ]
 
-//-----------------------------------------------------------------------------
+//Verificar stock entradas ----------------------------------------------------
+
+const isStock = (selectqty, stock) => {
+    if(selectqty > stock){
+        alert(`No existen suficientes entradas disponibles \nEntradas disponibles: ${stock}`);
+        return false;
+    }
+    return true;
+};
+
+//Agregar al carrito ----------------------------------------------------
+
+const addToCard = (foundPlace, foundQty, foundShow) => {
+
+    let itemPlace = {
+        name: foundShow.name + foundPlace.name,
+        show: foundShow.show,
+        day: foundShow.day,
+        date: foundShow.date,
+        qty: foundQty,
+        place: foundPlace.place,
+        stock: foundPlace.stock,
+        subprice: foundPlace.price * foundQty,
+        discount: (foundPlace.price * foundQty) * foundShow.discount,
+        price: (foundPlace.price * foundQty) -((foundPlace.price * foundQty) * foundShow.discount),
+    }
+       // if(isStock(itemPlace.qty, itemPlace.stock)){
+
+        car.push (itemPlace);
+        console.log (car);
+
+    let carJSON = JSON.stringify (car);
+    sessionStorage.setItem ("car", carJSON);
+    console.log (carJSON);
+
+       // locations[optionLoc - 1].stock -= qty;
+    //}
+    
+}
