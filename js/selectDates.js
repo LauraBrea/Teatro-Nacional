@@ -136,5 +136,7 @@ closeTicket.addEventListener ("click", function (e) {
 
     const sinopsisLC = document.getElementById ("sinopsisLC");
     sinopsisLC.style.display = "block";
+
+    sessionStorage.clear();
 })
 

@@ -10,9 +10,6 @@ let btnPL = document.getElementById ("btnPL");
         const foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
         addToCard (foundPlace, foundQty, foundShow); 
-
-        const listacompra = document.getElementById ("listacompra");
-        listacompra.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
     })
 
 //  Seleccion Boletos Palco Bajo --------------------------------------
@@ -27,9 +24,6 @@ btnPB.addEventListener ("click", function (e) {
     let foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
     addToCard (foundPlace, foundQty, foundShow); 
-
-    const listacompra = document.getElementById ("listacompra");
-    listacompra.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
 })
 
 //  Seleccion Boletos Palco Alto --------------------------------------
@@ -44,9 +38,6 @@ btnPA.addEventListener ("click", function (e) {
     let foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
     addToCard (foundPlace, foundQty, foundShow); 
-
-    const listacompra = document.getElementById ("listacompra");
-    listacompra.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
 })
 
 
