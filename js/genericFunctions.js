@@ -17,9 +17,9 @@ let dates = [
 ]
 
 let locations = [
-    {name:'PB', place:'Palco Bajo', price: 2500, stock: 3},
-    {name:'PA', place:'Palco Alto', price: 4500, stock: 30},
-    {name:'PL', place:'Platea', price: 3500, stock: 30},
+    {name:'PB', place:'Palco Bajo', price: 2500, stock: 30},
+    {name:'PA', place:'Palco Alto', price: 4500, stock: 50},
+    {name:'PL', place:'Platea', price: 3500, stock: 100},
 ]
 
 //Verificar stock entradas ----------------------------------------------------
@@ -47,7 +47,6 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
                         day: foundShow.day,
                         date: foundShow.date,
                         qty: foundQty,
-                        stock: foundLoc.stock,
                         place: foundPlace.place,
                         price: foundPlace.price,
                         subprice: foundPlace.price * foundQty,
@@ -62,7 +61,6 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
                     console.log (carJSON);
 
                     foundLoc.stock -= foundQty;
-                    console.log (locations);
                     
                     const itemShow = document.getElementById ("listacompra");
                     itemShow.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
@@ -77,3 +75,18 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
         itemShow.textContent = `* Debe seleccionar la ubicación y cantidad de boletos.`;
     }
 }
+
+//Calculo Total ----------------------------------------------------
+const showTotal = (checkcar) => {
+
+    let subtotal = 0;
+    checkcar.forEach(checkitem => {
+        subtotal += checkitem.pricetot
+    })
+    let total = "";
+    total += subtotal + fixedCost;
+
+    let showtot=document.getElementById ("showtot");
+        showtot.textContent = `IMPORTE TOTAL: $ ${total}`;
+    return;
+};

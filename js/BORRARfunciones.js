@@ -72,17 +72,15 @@ const showTotal = () => {
     alert (`${dataSubTotal} \nCargo servicio: +$ ${fixedCost} \n \nTOTAL: $ ${datatotal} `);
     return;
 };
-*/
 
 
-function showcar() {
-    let text;
-    let li = document.createElement ("li");
-    let p= document.createElement ("p");
-    
-        for (i=0; i < car.lenght; i++) {
-            contenido = car[i].show + car[i].price;
-            p.appendChild(document.createTextNode(text));
-            document.querySelector("#listacompra").appendChild(li).appendChild(p);
-        }
-    }
+
+
+    td.textContent = `${item.day} ${item.date} `;
+            td.textContent = `${item.show} `;
+            td.textContent = `Boletos: ${item.qty} ${item.place}`;
+            td.textContent = `Subtotal: $ ${item.subprice} `;
+            td.textContent = `Descuento: -$ ${item.discount}`;
+            td.textContent = `Total: $ ${item.pricetot}`;
+
+            */

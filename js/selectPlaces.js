@@ -21,7 +21,7 @@ btnPB.addEventListener ("click", function (e) {
 
     const foundPlace = locations.find (location => location.name === 'PB');
     const foundQty = document.getElementById ("inputPB").value;
-    let foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
+    const foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
     addToCard (foundPlace, foundQty, foundShow); 
 })
@@ -35,7 +35,7 @@ btnPA.addEventListener ("click", function (e) {
 
     const foundPlace = locations.find (location => location.name === 'PA');
     const foundQty = document.getElementById ("inputPA").value;
-    let foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
+    const foundShow = JSON.parse (sessionStorage.getItem ("showtempo"));
 
     addToCard (foundPlace, foundQty, foundShow); 
 })
