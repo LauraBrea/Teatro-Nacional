@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="stylesheet" type="text/css" href="../css/pageStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/showcar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script> function showcar() {} window.onload = showcar; </script>
     <title>Carrito de Compras</title>
 </head>
@@ -46,25 +47,37 @@
         </section>
     </header>
     <section class="car" id="carpage" style="display: none;">
-        <div class="car__titlebox">
-            <article class="car__title">
+        <div>
+            <article>
                 <h2 class="mainH2">LISTA DE COMPRAS</h2>
             </article>
             <article class="car__titlespace"></article>
         </div>
-        
-
-        <div class="car__list" id="carlist"></div>
-
-        <div>
-            <h5 class="mainH5" id="fixedcost">Cargo fijo por utilizar el servicio: $</h5>
+        <div class="car__listbox">
+            <div class="car__items">
+                <span class="car__color span"> Obra </span>
+                <span class="car__color span"> Fecha</span>
+                <span class="car__color span"> Boletos</span>
+                <span class="car__color span"> Subtotal</span>
+                <span class="car__color span"> Descuento</span>
+                <span class="car__color span">Total</span>
+                <a></a>
+            </div>
+            <article class="car__titlespace"></article>
         </div>
-        
-        <div class="car__totalbox">
-            <h3 class="mainH3" id="showtot">TOTAL: $<h3>
+        <div class="car__listbox">
+            <ul class="car__list" id="carlist"></ul>
         </div>
-
-
+        <div class="car__fixed">
+            <span class="span">Cargo fijo por utilizar el servicio: </span>
+            <span class="span" id="fixedcost"></span>
+        </div>
+        <div class="car__titlespace"></div>
+        <div class="car__fixed">
+            <h3 class="mainH3">IMPORTE TOTAL: </h3>
+            <h3 class="mainH3" id="showtot"> </h3>
+        </div>
+        <div class="car__titlespace"></div>
         <div class="car__buttonbox">
             <button class="car__button button">CONFIRMAR</button>
             <button class="car__button button">VACIAR</button>

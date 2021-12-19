@@ -87,19 +87,9 @@ input {
     }
 
 .loginbutton {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-    height: 56px;
-    border-color:  black;
-    background-color: black;
-    border-width: 1px;
-    border-radius: 10px;
-    height: 35px;
-    width: 130px;
-    margin: 5px;
+    height: 40px;
+    width: 140px;
+    margin: 10px;
     z-index: 3; }
   
 .loginbutton:hover {

@@ -101,12 +101,12 @@
   overflow: hidden; }
 
 .galleryOb__but {
-  height: 50px;
-  width: 165px;
+  height: 45px;
+  width: 180px;
+  padding: 0px;
   position: absolute;
   top: 70%;
-  border-radius: 10px;
- }
+  border-radius: 10px; }
 
 .galleryOb__img {
   width: 100%;

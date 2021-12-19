@@ -59,7 +59,7 @@ sieteEne.addEventListener ("click", function (e) {
     nameTicket.textContent = "LAGO DE LOS CISNES";
 
     const dateTicket = document.getElementById ("dateTicket");
-    dateTicket.textContent = "Viernes, 7 Enero 2022 (-10%)";
+    dateTicket.textContent = "Viernes, 7 Enero 2022 - 19.30hs (-10%)";
     
 })
 //  Abrir Desplegable Menú Reservar entradas 8 Ene ---------------------
@@ -89,7 +89,7 @@ ochoEne.addEventListener ("click", function (e) {
     nameTicket.textContent = "LAGO DE LOS CISNES";
 
     const dateTicket = document.getElementById ("dateTicket");
-    dateTicket.textContent = "Sábado 8 Enero 2022";
+    dateTicket.textContent = "Sábado 8 Enero 2022 - 19.30hs";
 })
 //  Abrir Desplegable Menú Reservar entradas 9 Ene ---------------------
 
@@ -118,7 +118,7 @@ nueveEne.addEventListener ("click", function (e) {
     nameTicket.textContent = "LAGO DE LOS CISNES";
 
     const dateTicket = document.getElementById ("dateTicket");
-    dateTicket.textContent = "Domingo 9 Enero 2022";
+    dateTicket.textContent = "Domingo 9 Enero 2022 - 19.30hs";
 })
 
 //  Cerrar Desplegable Menú Reservar entradas ---------------------------

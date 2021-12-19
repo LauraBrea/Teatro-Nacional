@@ -5,6 +5,9 @@ const logUser = [];
 const car = [];
 const fixedCost = 500;
 
+const generarId = () => Math.floor(Math.random() * (1000000 - 1)) + 1;
+
+
 //Arreglos de Obras-Fechas y Ubicación ---------------------------------------
 
 let dates = [
@@ -42,6 +45,7 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
             if(isStock(foundQty, foundLoc.stock)){
 
                     let itemCar = {
+                        id: generarId,
                         name: foundShow.name + foundPlace.name,
                         show: foundShow.show,
                         day: foundShow.day,
@@ -87,6 +91,6 @@ const showTotal = (checkcar) => {
     total += subtotal + fixedCost;
 
     let showtot=document.getElementById ("showtot");
-        showtot.textContent = `IMPORTE TOTAL: $ ${total}`;
+        showtot.textContent = `$ ${total}`;
     return;
 };
