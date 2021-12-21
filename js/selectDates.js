@@ -118,7 +118,7 @@ nueveEne.addEventListener ("click", function (e) {
     nameTicket.textContent = "LAGO DE LOS CISNES";
 
     const dateTicket = document.getElementById ("dateTicket");
-    dateTicket.textContent = "Domingo 9 Enero 2022 - 19.30hs";
+    dateTicket.textContent = "Domingo 9 Enero 2022 - 19.00hs";
 })
 
 //  Cerrar Desplegable Menú Reservar entradas ---------------------------
@@ -139,4 +139,3 @@ closeTicket.addEventListener ("click", function (e) {
 
     sessionStorage.clear();
 })
-

@@ -5,18 +5,17 @@ const logUser = [];
 const car = [];
 const fixedCost = 500;
 
-const generarId = () => Math.floor(Math.random() * (1000000 - 1)) + 1;
-
+const genId = () => Math.floor(Math.random() * (1000000 - 1)) + 1;
 
 //Arreglos de Obras-Fechas y Ubicación ---------------------------------------
 
 let dates = [
-    {name: 'sieteEne', date:'07/01/22', day:'Viernes', show:'Lago de los Cisnes', discount: 0.1},
-    {name: 'ochoEne', date:'08/01/22', day:'Sábado', show:'Lago de los Cisnes', discount: 0},
-    {name: 'nueveEne', date:'09/01/22', day:'Domingo', show:'Lago de los Cisnes', discount: 0},
-    {name: 'ventiunoEne', date:'21/01/22', day:'Viernes', show:'La Bella Durmiente', discount: 0.05},
-    {name: 'ventidosEne', date:'22/01/22', day:'Sábado', show:'La Bella Durmiente', discount: 0},
-    {name: 'ventitresEne', date:'23/01/22', day:'Domingo', show:'La Bella Durmiente', discount: 0},
+    {name: 'sieteEne', date:'07/01/22', time:'19.30', show:'Lago de los Cisnes', discount: 0.1},
+    {name: 'ochoEne', date:'08/01/22', time:'19.30', show:'Lago de los Cisnes', discount: 0},
+    {name: 'nueveEne', date:'09/01/22', time:'19.00', show:'Lago de los Cisnes', discount: 0},
+    {name: 'ventiunoEne', date:'21/01/22', time:'19.30', show:'La Bella Durmiente', discount: 0.05},
+    {name: 'ventidosEne', date:'22/01/22', time:'19.30', show:'La Bella Durmiente', discount: 0},
+    {name: 'ventitresEne', date:'23/01/22', time:'19.00', show:'La Bella Durmiente', discount: 0},
 ]
 
 let locations = [
@@ -45,10 +44,9 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
             if(isStock(foundQty, foundLoc.stock)){
 
                     let itemCar = {
-                        id: generarId,
                         name: foundShow.name + foundPlace.name,
                         show: foundShow.show,
-                        day: foundShow.day,
+                        time: foundShow.time,
                         date: foundShow.date,
                         qty: foundQty,
                         place: foundPlace.place,
@@ -57,6 +55,8 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
                         discount: (foundPlace.price * foundQty) * foundShow.discount,
                         pricetot: (foundPlace.price * foundQty) -((foundPlace.price * foundQty) * foundShow.discount),
                     }
+
+                    
                     car.push (itemCar);
                     console.log (car);
 

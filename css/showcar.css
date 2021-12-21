@@ -12,6 +12,10 @@
     opacity: 1;
     visibility: inherit; }
 
+/*--------- jquery ---------*/
+.legendtxt {
+    margin-top: 25px; }
+
 /*--------- main ---------*/
 .car {
     width: 90%;
@@ -44,7 +48,7 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 2.5fr 2fr 2fr 1.5fr 1.5fr 1fr 0.3fr;
+    grid-template-columns: 2.5fr 2.5fr 2fr 1.5fr 1.5fr 1fr 0.3fr;
     text-align: left; 
     margin-top: 20px;
     margin-bottom: 10px;}
@@ -53,7 +57,7 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 9.5fr 1.3fr;
+    grid-template-columns: 10fr 1.3fr;
     text-align: left; 
     margin-top: 15px;
     margin-bottom: 15px;}
@@ -89,10 +93,17 @@
     background-color: white;
     position: relative; }
 
+.car__legendbox a:hover {
+    color: black; }
+
 .car__iconClose {
-    color: #b5a58a;
     float: right;
     margin: 20px; }
 
-.car__legendbox a:hover {
+.car__iconClose i {
+    color: #b5a58a; }
+
+.car__legendbox i:hover {
     color: black; }
+
+  

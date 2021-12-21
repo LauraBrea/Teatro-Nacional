@@ -51,7 +51,6 @@ let btnVal = document.getElementById ("btnVal");
 
             const legendVal = document.getElementById ("legendVal");
             legendVal.style.display = "block";
-
         } 
         else {
             localStorage.removeItem ("usuariolog");

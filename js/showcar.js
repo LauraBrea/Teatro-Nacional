@@ -1,58 +1,78 @@
 //Verificar contenido carrito ------------------------------------------------
 
-window.onload =  function showcar () {
+$(function showcar() {
+
+    sessionStorage.clear();
 
     const checkcar = JSON.parse(localStorage.getItem ("car"));
-    
-    if (checkcar.lenght != 0) {
 
-        const legendCar = document.getElementById ("legendCar");
-        legendCar.style.display = "none";
+    if (checkcar !== null) {
 
-        const carpage = document.getElementById ("carpage");
-        carpage.style.display = "block";
-
-        const carfooter = document.getElementById ("carfooter");
-        carfooter.style.display = "block";
-
-
-        //let carlist=document.getElementById ("carlist");
+        $("#legendCar").hide();
+        $("#carpage").show();
+        $("#carfooter").show();
 
         for (const item of checkcar) {
 
-            //let li = document.createElement ("li");
+            $("#carlist").append(`<li> <div class="car__items">
+            <span class="span"> ${item.show} </span>
+            <span class="span"> ${item.date} - ${item.time}hs </span>
+            <span class="span"> ${item.qty} ${item.place} </span>
+            <span class="span"> $ ${item.subprice} </span>
+            <span class="span"> -$ ${item.discount} </span>
+            <span class="span"> $ ${item.pricetot} </span>
+            <a><i class="fa fa-times fa-lg" aria-hidden="true"></i></a>
+            </div> </li>` );
+        }
 
-                        $("#carlist").append(`<li> <div class="car__items">
-                        <span class="span"> ${item.show} </span>
-                        <span class="span"> ${item.day} ${item.date} </span>
-                        <span class="span"> ${item.qty} ${item.place} </span>
-                        <span class="span"> $ ${item.subprice} </span>
-                        <span class="span"> -$ ${item.discount} </span>
-                        <span class="span"> $ ${item.pricetot} </span>
-                        <a><i class="fa fa-times fa-lg" aria-hidden="true"></i></a>
-
-                        </div> </li>` );
-
-                      
-
-}
-            //li.textContent = `${item.show} - ${item.day} ${item.date} - Boletos: ${item.qty} ${item.place} - Subtotal: $ ${item.subprice} - Descuento: -$ ${item.discount} - Total: $ ${item.pricetot}`;
-            //carlist.appendChild(li);
-        //}
-
-        let fixed=document.getElementById ("fixedcost");
+        let fixed=document.querySelector ("#fixedcost");
         fixed.textContent = `$ ${fixedCost}`;
 
         showTotal(checkcar);
 
     } else {
-        const legendCar = document.getElementById ("legendCar");
-        legendCar.style.display = "block";
 
-        const carfooter = document.getElementById ("carfooter");
-        carfooter.style.display = "block";
+        $("#legendCar").show();
+        $("#carpage").hide();
+        $("#carfooter").show();
     };
+});
 
-};
+//  Vaciar carrito de compras --------------------------------------------
 
+$("#carclear").click(function carclear() {
 
+    localStorage.removeItem('car');
+
+    $("#legendCar").show();
+    $("#carpage").hide();
+    $("#carfooter").show();
+});
+
+//  Confirmar compra --------------------------------------------
+
+$("#carconfirm").click(function carconfirm() {
+
+    localStorage.removeItem('car');
+
+    $("#legendCar").show();
+    $("#carpage").hide();
+    $("#carfooter").show();
+
+    let mailuser = JSON.parse (localStorage.getItem ("usuario"));
+    let mail= " ";
+    let name= " ";
+
+    for (let usuario of mailuser) {
+        mail += usuario.mail;
+        name += usuario.name;
+    }
+
+    const legendCarTxt = document.querySelector ("#legendCarTxt");
+        legendCarTxt.textContent = "Gracias por su compra " + name + " !";
+
+        $("#legendCarTxt").append(
+            `<h4 class="legendtxt mainH4"> El comprobante de reserva y las instrucciones de pago han sido enviados a: <strong> ${mail} <strong></h4>`);
+});
+
+     

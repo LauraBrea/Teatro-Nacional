@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="../css/pageStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/showcar.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script> function showcar() {} window.onload = showcar; </script>
     <title>Carrito de Compras</title>
 </head>
 <body>
@@ -51,7 +50,6 @@
             <article>
                 <h2 class="mainH2">LISTA DE COMPRAS</h2>
             </article>
-            <article class="car__titlespace"></article>
         </div>
         <div class="car__listbox">
             <div class="car__items">
@@ -63,7 +61,7 @@
                 <span class="car__color span">Total</span>
                 <a></a>
             </div>
-            <article class="car__titlespace"></article>
+            <div class="car__titlespace"></div>
         </div>
         <div class="car__listbox">
             <ul class="car__list" id="carlist"></ul>
@@ -79,18 +77,15 @@
         </div>
         <div class="car__titlespace"></div>
         <div class="car__buttonbox">
-            <button class="car__button button">CONFIRMAR</button>
-            <button class="car__button button">VACIAR</button>
+            <button class="car__button button" id="carconfirm">CONFIRMAR</button>
+            <button class="car__button button" id="carclear">VACIAR</button>
         </div>
         
     </section>
     <div class="car__legendbox" id="legendCar" style="display: none;">
-        <a class="car__iconClose" onclick="location.reload()"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>
-        <h3 class="car__legend mainH3" id="">Su carrito de compras está vacío</h3>
+        <a href="../index.html" class="car__iconClose"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>
+        <h3 class="car__legend mainH3" id="legendCarTxt">Su carrito de compras está vacío</h3>
     </div>
-
-
-
     <footer class="footer" id="carfooter" style="display: none;">
         <article class="footer__logo"> 
             <img class="footer__logo footer__logo--img" src="../img/logobco.png" alt="logo gn">  
