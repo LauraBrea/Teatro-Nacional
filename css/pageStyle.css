@@ -53,6 +53,7 @@ a:active {
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
+  padding: 0;
   z-index: 3;}
 
 .button:hover {
@@ -70,9 +71,8 @@ a:active {
   border-color:  #b5a58a;
   background-color: #b5a58a;
   border-width: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   border-radius: 10px;
+  padding: 0;
   z-index: 3;
   cursor: not-allowed; }
 
@@ -230,8 +230,10 @@ iframe {
   border: none;
   background-color: #b5a58abd;
   border-radius: 5px 5px;
+  text-align: center;
+  padding-left: px;
   height: 30px;
-  width: 125px; }
+  width: 120px; }
 
 .header__button:hover {
   background-color: black;

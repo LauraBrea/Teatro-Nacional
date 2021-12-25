@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
     <link rel="stylesheet" type="text/css" href="css/otherPages.css">
     <link rel="stylesheet" type="text/css" href="css/selectPlaces.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>El Lago de los Cisnes</title>
 </head>
 <body>
@@ -96,52 +97,52 @@
                         <h3 class="ticket__titlename mainH3" id="dateTicket">FECHA: </h3>
                     </article>
                     <table class="ticket__table">
-                        <tr>
-                            <td> Platea </td>
-                            <td> $ 3500 </td>
-                            <td>
-                                <div class="quantity ">
-                                    <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
-                                    <input id="inputPL" type="number" min="0" max="10" step="1" value="0" placeholder="0">
-                                    <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
-                                </div>
-                            </td>
-                            <td> 
-                                <button id="btnPL" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> Palco Bajo </td>
-                            <td> $ 2500 </td>
-                            <td>
-                                <div class="quantity">
-                                    <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
-                                    <input id="inputPB" type="number" min="0" max="10" step="1" value="0" placeholder="0">
-                                    <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
-                                </div>
-                            </td>
-                            <td> 
-                                <button id="btnPB" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> Palco Alto </td>
-                            <td> $ 4500 </td>
-                            <td>
-                                <div class="quantity">
-                                    <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
-                                    <input id="inputPA" type="number" min="0" max="10" step="1" value="0" placeholder="0">
-                                    <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
-                                </div>
-                            </td>
-                            <td> 
-                                <button id="btnPA" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td> Platea </td>
+                                <td> $ 3500 </td>
+                                <td>
+                                    <div class="quantity ">
+                                        <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
+                                        <input id="inputPL" type="number" min="0" max="10" step="1" value="0" placeholder="0">
+                                        <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
+                                    </div>
+                                </td>
+                                <td> 
+                                    <button id="btnPL" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Palco Bajo </td>
+                                <td> $ 2500 </td>
+                                <td>
+                                    <div class="quantity">
+                                        <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
+                                        <input id="inputPB" type="number" min="0" max="10" step="1" value="0" placeholder="0">
+                                        <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
+                                    </div>
+                                </td>
+                                <td> 
+                                    <button id="btnPB" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Palco Alto </td>
+                                <td> $ 4500 </td>
+                                <td>
+                                    <div class="quantity">
+                                        <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
+                                        <input id="inputPA" type="number" min="0" max="10" step="1" value="0" placeholder="0">
+                                        <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
+                                    </div>
+                                </td>
+                                <td> 
+                                    <button id="btnPA" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
                     </table>
                     <article class="ticket__listacompra" id="listacompra"></article>
-                    <article class="ticket__btn">
-                        <button class="ticket__but ticket__but--but button"><a href="pages/carrito.html">VER CARRITO</a></button>
+                    <article class="ticket__btnbox">
+                        <button class="ticket__btncar button"><a href="pages/carrito.html">MOSTRAR CARRITO</a></button>
                     </article>
                 </div>
                 <div class="ticket__map">
