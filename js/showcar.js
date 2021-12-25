@@ -44,7 +44,7 @@ $("#carclear").click(function carclear() {
 
     localStorage.removeItem('car');
 
-    $("#legendCar").show();
+    $("#legendCar").fadeIn(1000);
     $("#carpage").hide();
     $("#carfooter").show();
 });
@@ -55,7 +55,7 @@ $("#carconfirm").click(function carconfirm() {
 
     localStorage.removeItem('car');
 
-    $("#legendCar").show();
+    $("#legendCar").fadeIn(1000);
     $("#carpage").hide();
     $("#carfooter").show();
 
@@ -71,8 +71,12 @@ $("#carconfirm").click(function carconfirm() {
     const legendCarTxt = document.querySelector ("#legendCarTxt");
         legendCarTxt.textContent = "Gracias por su compra " + name + " !";
 
+        $ ("#legendCarTxt").css ("top","30%");
+
         $("#legendCarTxt").append(
-            `<h4 class="legendtxt mainH4"> El comprobante de reserva y las instrucciones de pago han sido enviados a: <strong> ${mail} <strong></h4>`);
+            `<div class="legendTxtinsert"> <h4 class="mainH4"> El comprobante de reserva y las instrucciones de pago han sido enviados a: </h4>
+             <h5 class="mainH5"> <strong> ${mail} <strong></h5>
+             <h4 class="legendTxtinsert mainH4"> ¡Recuerde que la validez de la reserva es de 48hs! </h4> </div>` );
 });
 
      

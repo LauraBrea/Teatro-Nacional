@@ -10,7 +10,7 @@ $('.quantity').each(function() {
 
     btnUp.click(function() {
       let oldValue = parseFloat(input.val());
-        if (oldValue >= max) {
+        if (oldValue >= max) { 
           var newVal = oldValue;
         } else {
           var newVal = oldValue + 1;
