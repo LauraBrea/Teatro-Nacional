@@ -46,12 +46,10 @@ a:active {
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 2px;
-  height: 56px;
+  height: 40px;
   border-color:  black;
   background-color: black;
   border-width: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
@@ -60,7 +58,7 @@ a:active {
 .button:hover {
   background-color: #b5a58a;
   border-color: #b5a58a;
-  transition: 3s; }
+  transition: 2s; }
 
 .buttonIn {
   color: white;

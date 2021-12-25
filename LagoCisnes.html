@@ -96,39 +96,48 @@
                         <h3 class="ticket__titlename mainH3" id="dateTicket">FECHA: </h3>
                     </article>
                     <table class="ticket__table">
-                            <tr>
-                                <td class=""> Platea </td>
-                                <td> $ 3500 </td>
-                                <td> Boletos: </td>
-                                <td>
-                                    <input class="ticket__input" type="number" id="inputPL" min="0" max="10" placeholder="0">
-                                </td>
-                                <td>
-                                    <button class="ticket__btnadd" type="submit" id="btnPL"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> Palco Bajo </td>
-                                <td> $ 2500 </td>
-                                <td> Boletos: </td>
-                                <td>
-                                    <input class="ticket__input" type="number" id="inputPB" min="0" max="10" placeholder="0">
-                                </td>
-                                <td>
-                                    <button class="ticket__btnadd" type="submit" id="btnPB"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> Palco Alto </td>
-                                <td> $ 4500 </td>
-                                <td> Boletos: </td>
-                                <td>
-                                    <input class="ticket__input" type="number" id="inputPA" min="0" max="10" placeholder="0">
-                                </td>
-                                <td>
-                                    <button class="ticket__btnadd" type="submit" id="btnPA"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td> Platea </td>
+                            <td> $ 3500 </td>
+                            <td>
+                                <div class="quantity ">
+                                    <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
+                                    <input id="inputPL" type="number" min="0" max="10" step="1" value="0" placeholder="0">
+                                    <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
+                                </div>
+                            </td>
+                            <td> 
+                                <button id="btnPL" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Palco Bajo </td>
+                            <td> $ 2500 </td>
+                            <td>
+                                <div class="quantity">
+                                    <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
+                                    <input id="inputPB" type="number" min="0" max="10" step="1" value="0" placeholder="0">
+                                    <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
+                                </div>
+                            </td>
+                            <td> 
+                                <button id="btnPB" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Palco Alto </td>
+                            <td> $ 4500 </td>
+                            <td>
+                                <div class="quantity">
+                                    <a class="PL quantity-button quantity-down"><i class="fa fa-minus fa-lg" aria-hidden="true"></i></a>
+                                    <input id="inputPA" type="number" min="0" max="10" step="1" value="0" placeholder="0">
+                                    <a class="PL quantity-button quantity-up"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
+                                </div>
+                            </td>
+                            <td> 
+                                <button id="btnPA" class="ticket__btnadd button">Añadir <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
                     </table>
                     <article class="ticket__listacompra" id="listacompra"></article>
                     <article class="ticket__btn">

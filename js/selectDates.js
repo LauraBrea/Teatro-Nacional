@@ -1,3 +1,38 @@
+//  Contador de entradas -------------------------------
+
+$('.quantity').each(function() {
+    let spinner = $(this),
+      input = spinner.find('input[type="number"]'),
+      btnUp = spinner.find('.quantity-up'),
+      btnDown = spinner.find('.quantity-down'),
+      min = input.attr('min'),
+      max = input.attr('max');
+
+    btnUp.click(function() {
+      let oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+      spinner.find("input").val(newVal);
+      //SelectorSlide.val(newVal);.    /*aquí pone el selector del slide*/
+      spinner.find("input").trigger("change");
+    });
+
+    btnDown.click(function() {
+      let oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+      spinner.find("input").val(newVal);
+     //SelectorSlide.val(newVal);        /*aquí pone el selector del slide*/
+      spinner.find("input").trigger("change");
+    });
+  });
+
 //  Desplegable Entrega de entradas -------------------------------
 
 let deliverticket = document.getElementById ("deliverticket");
