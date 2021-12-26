@@ -33,40 +33,16 @@ $('.quantity').each(function() {
     });
   });
 
-//  Desplegable Entrega de entradas -------------------------------
+//  Desplegable Entrega de entradas y Elegir mis Asientos--------------
 
-let deliverticket = document.getElementById ("deliverticket");
+$("#deliverticket").click(() => {
+  $("#delivertxt").slideToggle(500);
+  });
 
-deliverticket.addEventListener ("mouseenter", function (e) {
-    e.preventDefault(); 
+$("#selectseat").click(() => {
+  $("#seattxt").slideToggle(500);
+  });
 
-    const delivertxt = document.getElementById ("delivertxt");
-    delivertxt.style.display = "contents";
-})
-
-deliverticket.addEventListener ("mouseleave", function (e) {
-    e.preventDefault(); 
-
-    const delivertxt = document.getElementById ("delivertxt");
-    delivertxt.style.display = "none";
-})
-//  Desplegable Elegir mis asientos ---------------------------------
-
-let selectseat = document.getElementById ("selectseat");
-
-selectseat.addEventListener ("mouseenter", function (e) {
-    e.preventDefault(); 
-
-    const seattxt = document.getElementById ("seattxt");
-    seattxt.style.display = "contents";
-})
-
-selectseat.addEventListener ("mouseleave", function (e) {
-    e.preventDefault(); 
-
-    const seattxt = document.getElementById ("seattxt");
-    seattxt.style.display = "none";
-})
 //  Abrir Desplegable Menú Reservar entradas 7 Ene ---------------------
 
 let sieteEne = document.getElementById ("sieteEne");

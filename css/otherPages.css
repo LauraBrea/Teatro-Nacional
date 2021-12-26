@@ -1,17 +1,3 @@
-/*--------- header ---------*/
-.header {
-  width: 100%;
-  height:110px;
-  position: relative;
-  margin-bottom: 80px;}
-
-.header__color {
-  background-color: black; 
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  visibility: inherit; }
-
 /*--------- text ---------*/
 
 .tituloOb {
@@ -117,13 +103,6 @@
   align-content: center; }
   
 /* ------- MEDIA ----------*/
-
-/* ------- header ----------*/
-@media (max-width: 576px) {
-.header {
-  width: 100%;
-  height: 310px;
-  margin-bottom: 60px; } }
 
 /*--------- text ---------*/
 @media (max-width: 768px) {

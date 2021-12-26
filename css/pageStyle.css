@@ -243,8 +243,21 @@ iframe {
 .header__button:hover {
   background-color: black; }
 
-/*--------- nav burguer ---------*/
+/*--------- header short---------*/
+.headersh {
+  width: 100%;
+  height:125px;
+  position: relative;
+  margin-bottom: 80px;}
 
+.headersh__color {
+  background-color: black; 
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: inherit; }
+
+/*--------- nav burguer ---------*/
 .burger__iconbox {
   display: none; 
   text-align: right;
@@ -259,7 +272,7 @@ iframe {
   height: 40px;
   width: 40px; }
 
-.burger__iconbtn :active {
+.burger__iconbtn a:hover {
   color:#b5a58abd; }
 
 .burger__nav {
@@ -503,6 +516,17 @@ iframe {
 .header__logo {
   width: 140px;
   height: 70px; } }
+
+/* ------- header short----------*/
+@media (max-width: 576px) {
+.headersh {
+  height: 90px;
+  margin-bottom: 60px; } }
+
+@media (min-width: 576px) and (max-width: 768px) {
+.headersh {
+  height: 105px;
+  margin-bottom: 80px; } }
 
 /* -------  nav burger ----------*/
 @media (max-width: 768px) {
