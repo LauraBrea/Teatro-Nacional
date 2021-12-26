@@ -1,3 +1,9 @@
+//Animación Menú Burger ---------------------------------------------------------
+
+$(".burger__iconbox").click(() => {
+    $( ".burger__nav" ).slideToggle(1500);
+    });
+
 //Arreglos de Nuevo Usuario y Validar Usuario --------------------------------
 
 const newUser = [];

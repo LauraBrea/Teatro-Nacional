@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" type="text/css" href="../css/pageStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/newUser.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Registrarse</title>
 </head>
 <body>
@@ -37,11 +38,38 @@
                         <script src=""></script>
                     </li>
                     <li>
-                        <button class="header__button button"><a href="../pages/registrarse.html">Registrarse</a></button> 
+                        <a href="../pages/registrarse.html"><button class="header__button button">Registrarse</button></a>
                     </li>
                 </ul>
             </nav>
         </section>
+        <div class="burger__iconbox">
+            <a class="burger__iconbtn" id="burger" ><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+        </div>
+        <div class="burger__nav" id="burgernav" style="display: none;">
+            <ul>
+                <li>
+                    <a href="../index.html"><button class="burger__button button">Temporada</button></a>
+                </li>
+                <li>
+                    <a href="../pages/carrito.html" class="shoppingcart"><button class="burger__button button">Carrito</button></a>
+                </li>
+                <li>
+                    <a href="../pages/login.html" class="user"><button class="burger__button button">Login</button></a>
+                </li>
+                <li>
+                    <a href="../pages/registrarse.html"><button class="burger__button button">Registrarse</button></a>
+                </li>
+                <li class="burger__social">
+                    <ul>
+                        <li><a href="https://facebook.com" target="_blank" class="facebook"> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com" target="_blank" class="twitter"> <i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+                        <li><a href="https://instagram.com" target="_blank" class="instagram"> <i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+                        <li><a href="https://youtube.com" target="_blank" class="youtube"> <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </header>
     <section class="login" id="loginReg" style="display: block;">
             <div class="login__txt">
