@@ -4,15 +4,6 @@ $(".burger__iconbox").click(() => {
     $(".burger__nav").slideToggle(1500);
     });
 
-//Arreglos de Nuevo Usuario y Validar Usuario --------------------------------
-
-const newUser = [];
-const logUser = [];
-const car = [];
-const fixedCost = 500;
-
-const genId = () => Math.floor(Math.random() * (1000000 - 1)) + 1;
-
 //Arreglos de Obras-Fechas y Ubicación ---------------------------------------
 
 let dates = [
@@ -25,10 +16,14 @@ let dates = [
 ]
 
 let locations = [
-    {name:'PB', place:'Palco Bajo', price: 2500, stock: 30},
+    {name:'PB', place:'Palco Bajo', price: 2500, stock: 5},
     {name:'PA', place:'Palco Alto', price: 4500, stock: 50},
     {name:'PL', place:'Platea', price: 3500, stock: 100},
 ]
+
+//Generar ID ---------------------------------- --------------------------------
+
+const genId = () => Math.floor(Math.random() * (1000000 - 1)) + 1;
 
 //Verificar stock entradas ----------------------------------------------------
 
@@ -41,6 +36,11 @@ const isStock = (qty, stock) => {
 
 //Agregar al carrito ----------------------------------------------------
 
+const fixedCost = 500;
+
+const callCar = () => localStorage.getItem("listCar") === null ? [] : JSON.parse(localStorage.getItem("listCar"));
+const saveCar = (newitemCar) => localStorage.setItem("listCar", JSON.stringify(newitemCar));
+
 const addToCard = (foundPlace, foundQty, foundShow) => {
 
    const foundLoc = locations.find(location => location.name === foundPlace.name);
@@ -50,7 +50,7 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
             if(isStock(foundQty, foundLoc.stock)){
 
                     let itemCar = {
-                        name: foundShow.name + foundPlace.name,
+                        id: genId(),
                         show: foundShow.show,
                         time: foundShow.time,
                         date: foundShow.date,
@@ -61,20 +61,16 @@ const addToCard = (foundPlace, foundQty, foundShow) => {
                         discount: (foundPlace.price * foundQty) * foundShow.discount,
                         pricetot: (foundPlace.price * foundQty) -((foundPlace.price * foundQty) * foundShow.discount),
                     }
-
                     
-                    car.push (itemCar);
-                    console.log (car);
-
-                    let carJSON = JSON.stringify (car);
-                    localStorage.setItem ("car", carJSON);
-                    console.log (carJSON);
-
                     foundLoc.stock -= foundQty;
+
+                    const newitemCar = callCar();
+                    newitemCar.push(itemCar);
+                    saveCar(newitemCar);
                     
                     const itemShow = document.getElementById ("listacompra");
-                    itemShow.textContent = `* ${foundShow.date} - ${foundShow.show} - ${foundQty} ${foundPlace.place} - SubTot: $ ${(foundPlace.price*foundQty)} - Desc: -$ ${((foundPlace.price * foundQty) * foundShow.discount)} - Total: $ ${((foundPlace.price * foundQty)-((foundPlace.price * foundQty)*foundShow.discount))}`;
-        
+                    itemShow.textContent = `* ${itemCar.date} - ${itemCar.show} - ${itemCar.qty} ${itemCar.place} - SubTot: $ ${itemCar.subprice} - Desc: -$ ${itemCar.discount} - Total: $ ${itemCar.pricetot}`;
+
             } else {
                 const itemShow = document.getElementById ("listacompra");
                 itemShow.textContent = `* Quedan solo ${foundPlace.stock} boletos disponibles para esta ubicación.`;

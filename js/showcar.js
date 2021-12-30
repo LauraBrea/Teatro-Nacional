@@ -2,9 +2,7 @@
 
 $(function showcar() {
 
-    sessionStorage.clear();
-
-    const checkcar = JSON.parse(localStorage.getItem ("car"));
+    const checkcar = JSON.parse(localStorage.getItem ("listCar"));
 
     if (checkcar !== null) {
 
@@ -42,7 +40,7 @@ $(function showcar() {
 
 $("#carclear").click(function carclear() {
 
-    localStorage.removeItem('car');
+    localStorage.removeItem('listCar');
 
     $("#legendCar").fadeIn(1000);
     $("#carpage").hide();
@@ -53,13 +51,14 @@ $("#carclear").click(function carclear() {
 
 $("#carconfirm").click(function carconfirm() {
 
-    localStorage.removeItem('car');
+    localStorage.removeItem('listcar');
 
     $("#legendCar").fadeIn(1000);
     $("#carpage").hide();
     $("#carfooter").show();
 
-    let mailuser = JSON.parse (localStorage.getItem ("usuario"));
+    //definir usuario----- falta def key local storage
+    /*let mailuser = JSON.parse (localStorage.getItem ("usuario"));
     let mail= " ";
     let name= " ";
 
@@ -67,9 +66,9 @@ $("#carconfirm").click(function carconfirm() {
         mail += usuario.mail;
         name += usuario.name;
     }
-
+*/
     const legendCarTxt = document.querySelector ("#legendCarTxt");
-        legendCarTxt.textContent = "Gracias por su compra " + name + " !";
+        legendCarTxt.textContent = "Gracias por su compra  !";
 
         $ ("#legendCarTxt").css ("top","30%");
 
