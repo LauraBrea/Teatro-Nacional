@@ -50,6 +50,27 @@ $("#carclear").click(function carclear() {
 //  Confirmar compra --------------------------------------------
 
 $("#carconfirm").click(function carconfirm() {
+    
+    localStorage.removeItem('listCar');
+
+    $("#legendCar").fadeIn(1000);
+    $("#carpage").hide();
+    $("#carfooter").show();
+
+    const legendCarTxt = document.querySelector ("#legendCarTxt");
+        legendCarTxt.textContent = "Gracias por su compra  !";
+
+        $ ("#legendCarTxt").css ("top","30%");
+
+        $("#legendCarTxt").append(
+            `<div class="legendTxtinsert"> <h4 class="mainH4"> El comprobante de reserva y las instrucciones de pago han sido enviados a: </h4>
+             <h4 class="legendTxtinsert mainH4"> ¡Recuerde que la validez de la reserva es de 48hs! </h4> </div>` );
+});
+
+/*     
+//  Confirmar compra --------------------------------------------
+
+$("#carconfirm").click(function carconfirm() {
 
     localStorage.removeItem('listcar');
 
@@ -58,15 +79,15 @@ $("#carconfirm").click(function carconfirm() {
     $("#carfooter").show();
 
     //definir usuario----- falta def key local storage
-    /*let mailuser = JSON.parse (localStorage.getItem ("usuario"));
-    let mail= " ";
-    let name= " ";
+    //let mailuser = JSON.parse (localStorage.getItem ("usuario"));
+    //let mail= " ";
+    //let name= " ";
 
-    for (let usuario of mailuser) {
-        mail += usuario.mail;
-        name += usuario.name;
-    }
-*/
+    //for (let usuario of mailuser) {
+    //    mail += usuario.mail;
+    //    name += usuario.name;
+    //}
+
     const legendCarTxt = document.querySelector ("#legendCarTxt");
         legendCarTxt.textContent = "Gracias por su compra  !";
 
@@ -77,5 +98,4 @@ $("#carconfirm").click(function carconfirm() {
              <h5 class="mainH5"> <strong> ${mail} <strong></h5>
              <h4 class="legendTxtinsert mainH4"> ¡Recuerde que la validez de la reserva es de 48hs! </h4> </div>` );
 });
-
-     
+*/
