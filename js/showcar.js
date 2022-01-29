@@ -19,7 +19,6 @@ $(function showcar() {
             <span class="span"> $ ${item.subprice} </span>
             <span class="span"> -$ ${item.discount} </span>
             <span class="span"> $ ${item.pricetot} </span>
-            <a><i class="fa fa-times fa-lg" aria-hidden="true"></i></a>
             </div> </li>` );
         }
 
@@ -57,14 +56,16 @@ $("#carconfirm").click(function carconfirm() {
     $("#carpage").hide();
     $("#carfooter").show();
 
+    const codecar = genCode();
+
     const legendCarTxt = document.querySelector ("#legendCarTxt");
-        legendCarTxt.textContent = "Gracias por su compra  !";
+          legendCarTxt.textContent = `Código de Reserva:   BA${codecar}`;
 
         $ ("#legendCarTxt").css ("top","30%");
 
         $("#legendCarTxt").append(
-            `<div class="legendTxtinsert"> <h4 class="mainH4"> El comprobante de reserva y las instrucciones de pago han sido enviados a: </h4>
-             <h4 class="legendTxtinsert mainH4"> ¡Recuerde que la validez de la reserva es de 48hs! </h4> </div>` );
+            `<div class="legendTxtinsert"> <h4 class="mainH4"> El código de reserva y las instrucciones de pago han sido enviadas por correo electrónico a su dirección de E-mail. </h4>
+             <h4 class="legendTxtinsert mainH4"> ¡Gracias por su compra! </h4> </div>` );
 });
 
 /*     

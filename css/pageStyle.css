@@ -174,13 +174,13 @@ iframe {
 .header__nav ul {
   list-style: none;
   float: right;
-  margin-right: 50px; }
+  margin-right: 30px; }
 
 .header__nav ul li {
   display: inline-block; }
 
 .header__nav ul li a {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400px;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
@@ -213,7 +213,7 @@ iframe {
   height: 80px;
   position: absolute;
   top: 10px;
-  left: 25px; 
+  left: 20px; 
   z-index: 7;}
 
 .header__logo--img {
@@ -228,17 +228,17 @@ iframe {
   top: 45%; }
 
 .header__button {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 400px;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
   color: white;
   border: none;
-  background-color: #b5a58abd;
+  background-color: #b5a58a;
   border-radius: 5px;
   text-align: center;
   height: 30px;
-  width: 120px; }
+  width: 130px; }
 
 .header__button:hover {
   background-color: black; }
@@ -273,7 +273,7 @@ iframe {
   width: 40px; }
 
 .burger__iconbtn a:hover {
-  color:#b5a58abd; }
+  color:#b5a58a; }
 
 .burger__nav {
   display: none; 
@@ -301,14 +301,14 @@ iframe {
   letter-spacing: 2px;
   color: white;
   border: none;
-  background-color: #b5a58abd;
+  background-color: #b5a58a;
   border-radius: 5px;
   text-align: center;
   height: 40px;
   width: 70%; }
 
 .burger__button:hover {
-  background-color: black; }
+  background-color: #b5a58a54; }
 
 .burger__social {
   display: inline; }
@@ -330,7 +330,7 @@ iframe {
   color: #b5a58a; }
   
 .burger__social ul li a:hover {
-  color: white;
+  color:  #b5a58a54;
   transition: 1s; }
 
 /*--------- footer ---------*/

@@ -24,6 +24,8 @@ let locations = [
 //Generar ID ---------------------------------- --------------------------------
 
 const genId = () => Math.floor(Math.random() * (1000000 - 1)) + 1;
+const genCode = () => Math.floor(Math.random() * (9999999)) + 1;
+
 
 //Verificar stock entradas ----------------------------------------------------
 
